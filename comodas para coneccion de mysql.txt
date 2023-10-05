@@ -1,0 +1,24 @@
+sudo apt update
+sudo apt upgrade
+Do you want to continue? [Y/n] y
+sudo su
+root@ip-172-31-91-169:/home/ubuntu# passwd root
+New password: 
+Retype new password: 
+passwd: password updated successfully
+root@ip-172-31-91-169:/home/ubuntu# exit
+exit
+sudo mysql_secure_installation
+Press y|Y for Yes, any other key for No: N
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : Y
+Success.
+Disallow root login remotelher key for No) : N
+Remove test database and access to it? Y
+Reload privilege tables now? (Press y|Y for Yes, a Y
+sudo mysql -u root
+sudo mysql -u root -p
+mysql> create user 'nare'@'localhost' IDENTIFIED WITH mysql_native_password BY 'nare144';
+mysql> GRANT ALL PRIVILEGES ON * . * TO 'nare'@'localhost';
+mysql> flush privileges;
+Query OK, 0 rows affected (0.01 sec)
+mysql> exit

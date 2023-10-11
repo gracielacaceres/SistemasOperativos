@@ -1,0 +1,35 @@
+INSTALACIÓN DE APACHE
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install apache2
+sudo systemctl start apache2
+
+INSTALAR MARIADB
+
+sudo apt update
+sudo apt install mariadb-server
+
+CONFIGURACIÓN
+
+sudo systemctl start mariadb
+sudo systemctl status mariadb
+sudo mysql_secure_installation
+sudo systemctl enable mariadb
+
+CREAR USUARIO Y CONTRASEÑA
+
+sudo mariadb
+CREATE USER 'nare'@'localhost' IDENTIFIED BY 'nare.123';
+exit
+
+INSTALACIÓN DE PHP Y SUS LIBRERÍAS 
+sudo apt update
+sudo apt-get install -y php php-tcpdf php-cgi php-pear php-mbstring libapache2-mod-php php-common php-phpseclib php-mysql
+php-mbstring php-zip php-gd php-json php-curl
+
+INSTALACIÓN DE PHPMYADMIN
+
+sudo apt install phpmyadmin 
+sudo phpenmod mbstring
+sudo systemctl restart apache2
